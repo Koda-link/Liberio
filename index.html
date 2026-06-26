@@ -7,7 +7,26 @@
     <title>Libros Liberio</title>
 </head>
 <body>
-    <div class="library"></div>
+    <div class="library">
+        <button id="showBook">Show Books</button>
+    </div>
+
+    <button command="show-modal" commandfor="suggestBook" id="newBook">New Book</button>
+    <dialog id="suggestBook">
+        <form method="post">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>  
+
+            <label for="author">Author:</label>
+            <input type="text" id="author" required>
+            
+            <label for="year">Year:</label>
+            <input type="number" id="year" min="-3500" max="2028" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <button commandfor="suggestBook" command="close">Nevermind</button>
+    </dialog>
     <script src="jscript.js"></script>
 </body>
 </html>
