@@ -27,6 +27,8 @@ function seeLibrary(){
     let dTitle = [];
     let dData = [];
 
+    let dErase = [];
+
     for(let i = 0 ; i < myLibrary.length ; i++){
         if(myLibrary[i].insight === false){
             dLibro[i] = document.createElement(`dl`);
@@ -46,7 +48,19 @@ function seeLibrary(){
             dData[2].textContent = `ID: ${myLibrary[i].id}`;
 
             myLibrary[i].insight = true;
+            dLibro[i].setAttribute(`data-id`, `${myLibrary[i].id}`);
+
+            dErase[i] = document.createElement(`button`);
+            dErase[i].textContent = `withdraw`;
+            dLibro[i].appendChild(dErase[i]);
+
+            dErase[i].addEventListener(`click`, () =>{
+                library.removeChild(dLibro[i]);
+                myLibrary.splice(i, 1);
+            });
         };
     };
 };
 showBook.addEventListener(`click`, seeLibrary);
+
+myLibrary.push(new Book(`flylord`, `goldie`, 1955, id = crypto.randomUUID(), insight = false));
