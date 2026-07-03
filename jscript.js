@@ -4,8 +4,7 @@ const newBook = document.querySelector(`#newBook`);
 const myLibrary = [];
 
 function Book(title, author, year, pages, id){
-    if (!new.target) {
-    throw Error("You must use the 'new' operator to call the constructor");}
+    if (!new.target) {throw Error("You must use the 'new' operator to call the constructor")};
     this.title = title;
     this.author = author;
     this.year = year;
@@ -66,7 +65,8 @@ function seeLibrary(){
             });
 
             dRead[i] = document.createElement(`button`);
-            dRead[i].textContent = `Read`;
+            myLibrary[i].read == false ? dRead[i].textContent = `Read`: dRead[i].textContent = `unRead`;
+            if(myLibrary[i].read == true){dLibro[i].classList.add(`read`)};
             dLibro[i].appendChild(dRead[i]);
 
             dRead[i].addEventListener(`click`, Book.prototype.readBook = function (){
@@ -85,4 +85,7 @@ function seeLibrary(){
 };
 showBook.addEventListener(`click`, seeLibrary);
 
-myLibrary.push(new Book(`flylord`, `goldie`, -1955, 125, id = crypto.randomUUID(), insight = false, read = false));
+myLibrary.push(new Book(`Lord of the Flies`, `William Golding`, 1954, 224, id = crypto.randomUUID(), insight = false, read = false));
+myLibrary.push(new Book(`Divina Commedia`, `Dante Alighieri`, 1321, 883, id = crypto.randomUUID(), insight = false, read = false));
+myLibrary.push(new Book(`Il principe`, `Nicolás Maquiavelo`,  1532, 239, id = crypto.randomUUID(), insight = false, read = false));
+myLibrary.push(new Book(`To Kill a Mockingbird`, `Harper Lee`, 1960, 281, id = crypto.randomUUID(), insight = false, read = true));

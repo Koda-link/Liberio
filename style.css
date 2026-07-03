@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    line-height: 1.5;
+    background-image: url("abinash-jothimani-P4KX6qSaBcY-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.library{
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: rgba(16, 16, 70, 0.5);
+}
+
+button{
+    background-color: maroon;
+    color: honeydew;
+}
+button:hover{
+    background-color: aliceblue;
+    color: midnightblue;
+}
+button:active{
+    background-color: black;
+    color: ghostwhite;
+}
+
+body > button{
+    margin: 8% 15%;
+    padding: 1% 5%;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-family: "Nova Cut", monospace;
+}
+
+dialog{
+    width: 44%;
+    height: 33%;
+    bottom: auto;
+    left: auto;
+    margin-top: 8%;
+    margin-right: 10%;
+    padding: 3%;
+    border-radius: 0px 25px 25px 25px;
+    border: double 6px firebrick;
+    background-color: navajowhite;
+    font-family: "Nova Cut", monospace;
+}
+form{
+    height: 80%;
+    padding: 2%;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+}
+dialog > button{
+    width: 50%;
+    margin-left: 50%;
+    height: 40px;
+    border-radius: 20px 20px 0px 20px;
+    font-family: monospace;
+    
+}
+form > button{
+    margin-top: 10%;
+    grid-column: 1 / 3;
+    height: 80%;
+    border-radius: 0px 20px 20px 20px;
+    font-family: 'Nova Cut', monospace;
+}
+
+label{
+    text-align: end;
+    margin-right: 6%;
+    margin-bottom: 6%;
+}
+input{
+    padding: 2%;
+    margin-bottom: 6%;
+    font-family: monospace;
+}
+
+dl{
+    margin: 2%;
+    padding: 3%;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr;
+    background-color: cornsilk;
+    border-radius: 20px;
+
+}
+dt{
+    font-family: 'Gill Sans', 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 4%;
+    grid-column: 1 / 3;
+
+}
+dd{
+    grid-column: 1 / 3;
+    font-family: 'Nova Cut', monospace;
+}
+
+dl button{
+    border-radius: 10px;
+    font-family: monospace;
+    margin: 0% 3%;
+}
+
+.read{
+    background-color: aliceblue;
+}
+.read button{
+    color: aliceblue;
+    background-color: midnightblue;
+}
+.read button:hover{
+    background-color: cornsilk;
+    color: firebrick;    
+}
+
