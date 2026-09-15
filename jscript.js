@@ -3,16 +3,18 @@ const showBook = document.querySelector(`#showBook`);
 const newBook = document.querySelector(`#newBook`);
 const myLibrary = [];
 
-function Book(title, author, year, pages, id){
-    if (!new.target) {throw Error("You must use the 'new' operator to call the constructor")};
-    this.title = title;
-    this.author = author;
-    this.year = year;
-    this.pages = pages;
+class Book{
+    constructor(title, author, year, pages, id){
+        if (!new.target) {throw Error("You must use the 'new' operator to call the constructor")};
+        this.title = title;
+        this.author = author;
+        this.year = year;
+        this.pages = pages;
 
-    this.id = id;
-    this.insight = insight;
-    this.read = read;
+        this.id = id;
+        this.insight = insight;
+        this.read = read;
+    }
 };
 
 function addBook(event){
